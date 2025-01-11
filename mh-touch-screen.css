@@ -1,0 +1,153 @@
+* {
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "cairo";
+}
+
+body {
+    direction: rtl;
+}
+
+/* ############### */
+.screen-size {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 200%;
+    left: 200%;
+}
+
+.screen-size img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+
+/* section */
+
+.section {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+
+/* hero */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+}
+
+.hero .section-header {
+    overflow: hidden;
+    position: relative;
+
+}
+
+.hero .section-header .banner {
+    width: 100%;
+    display: block;
+}
+
+.hero .section-header::before {
+    content: " ";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #00000010;
+}
+
+.hero .section-header::after {
+    content: " ";
+    /* background-color: #d3ae63; */
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: #1e1e1e;
+    box-shadow: 0px 0px 50px 40px #000000b7;
+    box-shadow: 0px 0px 50px 40px #1e1e1e;
+    position: relative;
+    z-index: 2;
+}
+
+.hero .section-header .header-child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    width: 90%;
+    z-index: 3;
+}
+
+.hero .section-header .header-child img {
+    width: 25%;
+    filter: drop-shadow(0px 0px 15px #000);
+}
+
+.hero .section-header .header-child p {
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 0px 0px 15px #000;
+    margin-top: 5px;
+}
+
+.hero .section-body {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.hero .section-body .upper-shape {
+    width: 150%;
+    transform: translate(-20%, -50%);
+    position: absolute;
+    top: 0%;
+}
+
+.hero .section-body .lower-shape {
+    width: 150%;
+    transform: translate(50%, 50%);
+    position: absolute;
+    bottom: 0%;
+}
+
+.hero .section-body .body-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 85%;
+    margin: auto;
+    display: none;
+}
+
+.hero .section-body .body-content div {
+    width: calc((100% - 20px) / 3);
+    aspect-ratio: 1/1;
+    background-color: #d3ae63;
+    border-radius: 5px;
+}
+
+.hero .space {
+    height: 5%;
+}
